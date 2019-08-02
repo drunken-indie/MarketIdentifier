@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>website</title>
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+  <!--orange background-->
+	<div class="color-orange">
+    <!--first row orange background-->
+    <div class="row">
+  	  <div class="col-md-2">
+  		  <div class="space-5"></div>
+        <!--hamburger menu-->
+        <div class="hamburger col-md-4" onclick="hamburger_menu_function(this)">
+          <div class="space-5"></div>
+  			  <div class="bar1"></div>
+    	 	  <div class="bar2"></div>
+  	  	  <div class="bar3"></div>
+  		  </div>
+		  </div>
+      <!--empty space between hamburger and links-->
+      <div class="col-md-7"></div>
+      <div class="col-md-1"><div class="space-5"></div><a class="text-white" href="home.html">Home</a></div>
+      <div class="col-md-1"><div class="space-5"></div><a class="text-white" href="register.html">Register</a></div>
+      <div class="col-md-1"><div class="space-5"></div><a class="text-white" href="login.html">Log in</a></div>
+      <!--title-->
+	  </div>
+    <div class="col-md-10">
+        <a class="title" href="home.html"><h2 class="text-white web_title">Market Identifier</h2></a>
+    </div>
+
+   <div class="space-5"></div>
+   <div class="space-5"></div>
+  </div>
+  <div class="space-20"></div>
+  <!--everythin under orange thing-->
+	<div style="padding-left: 30px;">
+    <div class="row">
+
+    </div>
+    <div class="space-20"></div>
+    <div class="row">
+      <!---여기서 부터 다시 시작하자 ㅋㅋㅋㅋㅋㅋㅋ AJAX 쓰던가 -->
+      <form name="login_user" action="/action_page.php" target="" id="new_usr_form" onsubmit="return check_login_form()">
+        <fieldset>
+          <legend>Log In.</legend>
+          <em>Email Address : </em><input type="text" name="user_email_login"><br>
+          <em>Password: </em><input type="Password" name="user_password_login"><br>
+        </fieldset>
+
+
+        <br>
+        <input type="submit" name="submit" value="Log In">
+        <input type="reset" name="reset">
+
+      
+      </form>
+      
+    </div>
+    <div class="space-5"></div>
+
+    
+    <!--
+		<button type="button" onclick="goToHome(this)">
+            Go to the dashboard!
+    </button> 
+    -->
+    <!--
+    <form action="simple_python.py" method="get" id="frm">
+        <div>Input : <br/><input type="text" name="search_text_id" value=""></div>
+        <div><input type="button" 
+                    onclick="document.getElementById('frm').submit();"
+                    value="send">
+        </div>
+    </form>
+    -->
+
+	</div>
+	
+	
+</body>
+</html>

@@ -1,0 +1,52 @@
+#The higher the score, the worse the product opportunity
+#Without the rank, the score will remain the same. 
+#For Keepa Amazon rating is an integer from 0 to 50, so 4.5 star = 45, 5.0 star = 50, 3.1 star = 31 etc
+
+For Amazon and Walmart:
+
+If average price < $10 = 4/4 #Not enough margin
+
+If 5 or more listings have a 5 star rating = 4/4 #No room For differentiation/Too competitive
+
+If 5 or more listings have a review count of 500 AND average rating is > 4 = 4/4 #Established market/Too competitive
+
+If 3 or more results are the same brand = 4/4 #Monopoly Type Market
+
+If price > $25 AND average rating < 4 = 3/4 #Potential room for improvement on a high margin item
+
+If < 5 star rating AND review count < 100 = 2/4 #Low demand, improvements might not be worth it
+
+If price > $25 AND average review count <100 = 1/4 #High margin low competition
+
+
+
+For eBay 
+
+
+If > 3 listings have > 300 reviews = 4/4
+
+If > 3 listings have > 4.5 star rating = 4/4
+
+If average sales > 500 AND average rating > 4.5 = 4/4
+
+If average sales > 500 AND average review count > 100 = 4/4
+
+
+If brand > 3 = 4/4
+
+If average rating <5 AND brand repetition <5 = 3/4
+
+
+If review count <100 AND rating < 4.5 = 2/4
+
+
+If average sales > 200 AND average rating < 5 = 1/4
+
+If average sales > 200 AND average review count < 100 = 1/4
+
+If average sales > 200 AND brand repetition < 3 = 1/4
+
+
+
+default = 2/4
+

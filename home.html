@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>website</title>
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+  <!--orange background-->
+	<div class="color-orange">
+    <!--first row orange background-->
+    <div class="row">
+  	  <div class="col-md-2">
+  		  <div class="space-5"></div>
+        <!--hamburger menu-->
+        <div class="hamburger col-md-4" onclick="hamburger_menu_function(this)">
+          <div class="space-5"></div>
+  			  <div class="bar1"></div>
+    	 	  <div class="bar2"></div>
+  	  	  <div class="bar3"></div>
+  		  </div>
+		  </div>
+      <!--empty space between hamburger and links-->
+      <div class="col-md-7"></div>
+      <div class="col-md-1"><div class="space-5"></div><a class="text-white" href="home.html">Home</a></div>
+      <div class="col-md-1"><div class="space-5"></div><a class="text-white" href="register.html">Register</a></div>
+      <div class="col-md-1"><div class="space-5"></div><a class="text-white" href="login.html">Log in</a></div>
+      <!--title-->
+	  </div>
+    <div class="col-md-10">
+        <a class="title" href="home.html"><h2 class="text-white web_title">Market Identifier</h2></a>
+    </div>
+    <!--2nd row, orange background-->
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+        <form class="user_search_box" >
+          <input type="text" placeholder="try : Moon Lamp" id="search_input">
+          <button type="button" onclick="search()"><i class="fa fa-search"></i></button>
+        </form>
+     </div>
+     <div class="col-md-3"></div>
+   </div>
+   <div class="space-5"></div>
+   <div class="space-5"></div>
+  </div>
+  <div class="space-20"></div>
+  <!--everythin under orange thing-->
+	<div style="padding-left: 30px;">
+    <div class="row">
+      <nav>
+        <ul>
+            <li><a href="javascript:void(0)" onclick="change_search_from(id)" id="amazon" class="active">Amazon</a></li>
+            <li><a href="javascript:void(0)" onclick="change_search_from(id)" id="ebay" class="">eBay</a></li>
+            <li><a href="javascript:void(0)" onclick="change_search_from(id)" id="walmart" class="">Walmart</a></li>
+          </ul>
+      </nav>
+    </div>
+    <div class="space-20 row"></div>
+    <div class="col-md-6">
+      <table class="scoreTable">
+        <thead><tr><th>from</th><th>score</th></tr></thead><tbody><tr><td>Amazon</td><td id="amazon_score"></td></tr><tr><td>Ebay</td><td id="ebay_score"></td></tr><tr><td>Walmart</td><td id="walmart_score"></td></tr></tbody>
+      </table>
+    </div>
+    <div class="space-20"></div>
+    <div class="row">
+      <!---여기서 부터 다시 시작하자 ㅋㅋㅋㅋㅋㅋㅋ AJAX 쓰던가 -->
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <!--table-->
+        <table id="table" class="greyGridTable"></table>
+      </div>
+      <div class="col-md-1"></div>
+      
+    </div>
+    <div class="space-5"></div>
+
+
+  
+	</div>
+	
+	
+</body>
+</html>

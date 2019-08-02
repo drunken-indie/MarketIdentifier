@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>website</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+  <!--orange background-->
+  <div class="color-orange">
+    <!--first row orange background-->
+    <div class="row">
+      <div class="col-md-2">
+        <div class="space-5"></div>
+        <!--hamburger menu-->
+        <div class="hamburger col-md-4" onclick="hamburger_menu_function(this)">
+          <div class="space-5"></div>
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+      </div>
+      <!--empty space between hamburger and links-->
+      <div class="col-md-7"></div>
+      <div class="col-md-1"><div class="space-5"></div><a class="text-white" href="home.html">Home</a></div>
+      <div class="col-md-1"><div class="space-5"></div><a class="text-white" href="register.html">Register</a></div>
+      <div class="col-md-1"><div class="space-5"></div><a class="text-white" href="login.html">Log in</a></div>
+      <!--title-->
+    </div>
+    <div class="col-md-10">
+        <a class="title" href="home.html"><h2 class="text-white web_title">Market Identifier</h2></a>
+    </div>
+
+    
+   <div class="space-5"></div>
+   <div class="space-5"></div>
+  </div>
+  <div class="space-20"></div>
+
+
+  <!--everythin under orange thing-->
+  <div style="padding-left: 30px;">
+    
+    <div class="space-20"></div>
+    <div style="padding-left: 30px;"><em class="submission_welcome">Welcome New User!</em></div>
+    <div class="space-20"></div>
+    <div class="row">
+      
+      
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+        <form name="register_new_user" action="/action_page.php" target="" id="new_usr_form" onsubmit="return check_register_form()">
+        <fieldset>
+          <legend>Personal Information.</legend>
+          <em>Name* : </em> <input type="text" name="user_name" placeholder="Please Enter the Name" required> <br>
+          <em>Birth Date* : </em><input type="Date" name="user_bdate" required><br>
+          <em>Address* : </em><input type="Address" name="user_address" required><br>
+          <em>Email* : </em> <input type="Email" name="user_email" placeholder="username@example.com"><br>
+          <em>Password* : </em><input type="password" id="user_password" name="user_password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$]).{7,15}"  required><br>
+          <div id="message">
+            <h5>Password must contain the following:</h5>
+            <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+            <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+            <p id="number" class="invalid">A <b>number</b></p>
+            <p id="special" class="invalid">A <b>special (!,@,#,$) character </b></p>
+            <p id="length" class="invalid">Length <b>8-15 characters</b></p>
+          </div>
+          <em>re-enter Password* : </em><input type="Password" maxlength="15" name="user_password_re" required><br>
+          <!--
+          <em style="font-size: 12px;" >Password length 7-15, containing at least one upper case, one lower case, one number and one synbol(!,@,#,$)</em><br>
+        -->
+          <em>Phone Number* : </em><input type="text" maxlength="13" name="user_phonenumber" placeholder="905-999-9999" required><br>
+          <em>Gender : </em>
+          <select name="user_gender">
+            <option value="initial">Please Select</option>
+            <option value="male">male</option>
+            <option value="female">female</option>
+            <option value="no">prefer not to say</option>
+          </select>
+        </fieldset><br>
+        <fieldset>
+          <legend>Payment Information.</legend>
+          <em>Card Number* : </em><input type="text" name="user_card_number" required><br>
+          <em>Exp Date* : </em><input type="Date" name="user_card_date" required><br>
+          <em>CVV* : </em><input type="number" name="user_card_cvv" placeholder="3-digit on back of card" required><br>
+          <em>Billing Address* : </em><input type="Address" name="user_card_address" required>
+        </fieldset>
+
+
+        <br>
+        <input type="submit" name="submit" value="Register">
+        <input type="reset" name="reset">
+
+      
+      </form>
+      </div>
+      <div class="col-md-3"></div>
+      
+    </div>
+    <div class="space-5"></div>
+
+    
+    <!--
+    <button type="button" onclick="goToHome(this)">
+            Go to the dashboard!
+    </button> 
+    -->
+    <!--
+    <form action="simple_python.py" method="get" id="frm">
+        <div>Input : <br/><input type="text" name="search_text_id" value=""></div>
+        <div><input type="button" 
+                    onclick="document.getElementById('frm').submit();"
+                    value="send">
+        </div>
+    </form>
+    -->
+
+  </div>
+  <script>
+var pw_myInput = document.getElementById("user_password");
+var pw_letter = document.getElementById("letter");
+var pw_capital = document.getElementById("capital");
+var pw_number = document.getElementById("number");
+var pw_special = document.getElementById("special");
+var pw_length = document.getElementById("length");
+
+// When the user clicks on the password field, show the message box
+pw_myInput.onfocus = function() {
+  document.getElementById("message").style.display = "block";
+}
+
+// When the user clicks outside of the password field, hide the message box
+pw_myInput.onblur = function() {
+  document.getElementById("message").style.display = "none";
+}
+
+// When the user starts to type something inside the password field
+pw_myInput.onkeyup = function() {
+  // Validate lowercase letters
+  var lowerCaseLetters = /[a-z]/g;
+  if(pw_myInput.value.match(lowerCaseLetters)) {  
+    pw_letter.classList.remove("invalid");
+    pw_letter.classList.add("valid");
+  } else {
+    pw_letter.classList.remove("valid");
+    pw_letter.classList.add("invalid");
+  }
+  
+  // Validate capital letters
+  var upperCaseLetters = /[A-Z]/g;
+  if(pw_myInput.value.match(upperCaseLetters)) {  
+    pw_capital.classList.remove("invalid");
+    pw_capital.classList.add("valid");
+  } else {
+    pw_capital.classList.remove("valid");
+    pw_capital.classList.add("invalid");
+  }
+
+  // Validate numbers
+  var numbers = /[0-9]/g;
+  if(pw_myInput.value.match(numbers)) {  
+    pw_number.classList.remove("invalid");
+    pw_number.classList.add("valid");
+  } else {
+    pw_number.classList.remove("valid");
+    pw_number.classList.add("invalid");
+  }
+  
+  var special_character = /[!@#$]/g;
+  if(pw_myInput.value.match(special_character)){
+    pw_special.classList.remove("invalid");
+    pw_special.classList.add("valid");
+  } else {
+    pw_special.classList.remove("valid");
+    pw_special.classList.add("invalid");
+  }
+  
+
+  // Validate length
+  if(pw_myInput.value.length >= 7 && pw_myInput.value.length <= 15) {
+    pw_length.classList.remove("invalid");
+    pw_length.classList.add("valid");
+  } else {
+    pw_length.classList.remove("valid");
+    pw_length.classList.add("invalid");
+  }
+}
+</script>
+  
+  
+</body>
+</html>

@@ -1,0 +1,62 @@
+Supervisor evaluation marking rubrik 
+
+
+
+No sentence "my book report is about" 
+Dont need to say all information like a legal 
+Like a pitch competition
+Have someone operating the visuals while we do the pitch 
+Leave details for the report but maybe give summary info for algorithms 
+Outline that we want to bring it to market 
+Shorter presentation is good (15 minuets but less if fine for a good presentation)
+	Doing things live makes it take longer than you think
+
+
+Burn down list of issues to show that our product is getting mature and we are getting ready to launch
+
+
+Personal story involving one real or fake person (protagonist).
+	The problem
+	Something they wanted to do
+
+Person should fail
+
+Goal is to get people to think it is a real problem
+
+
+
+
+
+Title slide after the story
+Short introduction just say names
+
+
+Mirror the first story but with Market Identifier
+
+People should accept there is a real problem.
+
+
+
+
+
+How we know the solution is scalable 
+	deployed to AWS
+	load testing
+
+Surprises we found while developing it
+
+
+
+Report should back up everything in the slides
+Size of the market
+Competetive chart with sentences to explain
+Dont just rewrite bulletpoints into the report 
+
+
+Put time into presentation
+
+
+supervisor
+His mark is saying that we dilegently did the work and it is our work.
+No rubrik. 
+Can give n/10 or n/12 or A+ 
